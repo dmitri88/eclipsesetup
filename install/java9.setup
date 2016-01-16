@@ -3,21 +3,14 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:jdt="http://www.eclipse.org/oomph/setup/jdt/1.0"
     xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xmlns:setup.targlets="http://www.eclipse.org/oomph/setup/targlets/1.0"
     xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
     name="mypr"
     label="mypr">
-  <setupTask
-      xsi:type="jdt:JRETask"
-      version="JavaSE-1.8"
-      location="${jre.location-1.8}">
-    <description>Define the JRE needed to compile and run the Java projects of ${scope.project.label}</description>
-  </setupTask>
   <setupTask
       xsi:type="setup:EclipseIniTask"
       option="-Xmx"
@@ -36,6 +29,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
+      value="Neon"
       defaultValue="Mars"
       storageURI="scope://Workspace"/>
   <setupTask
@@ -56,16 +50,6 @@
           name="org.eclipse.mypr.feature.group"/>
       <requirement
           name="org.eclipse.sdk.feature.group"/>
-      <sourceLocator
-          rootFolder="${git.clone.location}"
-          locateNestedProjects="true"/>
-      <repositoryList
-          name="Mars">
-        <repository
-            url="http://download.eclipse.org/releases/mars"/>
-        <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
-      </repositoryList>
     </targlet>
   </setupTask>
   <setupTask
@@ -87,13 +71,6 @@
       name="jre.location-1.9"
       label="jre location-1.9">
     <description>jre.location-1.9</description>
-  </setupTask>
-  <setupTask
-      xsi:type="jdt:JRETask"
-      id=""
-      version="JavaSE-1.8"
-      location="${jre.location-1.8}">
-    <description>JRE 9</description>
   </setupTask>
   <stream name="my-eclipse-neon"/>
   <logicalProjectContainer

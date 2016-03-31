@@ -28,7 +28,7 @@
       xsi:type="setup.p2:P2Task">
     <requirement
         name="org.python.pydev.feature.feature.group"
-        versionRange="4.5.4.201601292234"/>
+        versionRange="4.5.5.201603221110"/>
     <repository
         url="http://pydev.org/updates"/>
     <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>

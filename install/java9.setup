@@ -41,7 +41,7 @@
       xsi:type="setup.p2:P2Task">
     <requirement
         name="org.eclipse.jdt.java9patch.feature.group"
-        versionRange="1.1.0.v20151013-1607_BETA_JAVA9"/>
+        versionRange="1.1.0.v20160201-0953_BETA_JAVA9"/>
     <repository
         url="http://download.eclipse.org/eclipse/updates/4.6-P-builds"/>
     <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>

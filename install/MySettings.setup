@@ -60,6 +60,9 @@
     <requirement
         name="org.eclipse.egit.feature.group"
         versionRange="4.3.0.201603230630-rc1"/>
+    <requirement
+        name="org.eclipse.wst.web_ui.feature.feature.group"
+        versionRange="3.8.0.v201512010225"/>
     <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
   </setupTask>
   <setupTask

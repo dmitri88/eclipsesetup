@@ -35,9 +35,9 @@
       xsi:type="setup.p2:P2Task">
     <requirement
         name="org.springsource.ide.eclipse.gradle.feature.feature.group"
-        versionRange="3.7.2.201511260851-RELEASE"/>
+        versionRange="3.8.2.201610040550-RELEASE"/>
     <repository
-        url="http://dist.springsource.com/release/TOOLS/update/e4.5/"/>
+        url="http://dist.springsource.com/release/TOOLS/update/e4.6/"/>
     <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
   </setupTask>
   <setupTask
